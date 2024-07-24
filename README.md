@@ -24,10 +24,10 @@ Task Manager is a web application built with the Phoenix framework in Elixir. It
    mix deps.get
 
 3. **Set up the database:**
-  ```sh
-  mix ecto.setup
+   ```sh
+   mix ecto.setup
 
 4. **Start the Phoenix server:**
-  ```sh
-  mix phx.server
-  The server will be available at http://localhost:4000.
+   ```sh
+   mix phx.server
+   The server will be available at http://localhost:4000.
