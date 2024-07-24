@@ -1,18 +1,33 @@
-# TaskManager
+# Task Manager
 
-To start your Phoenix server:
+Task Manager is a web application built with the Phoenix framework in Elixir. It allows users to manage tasks, including creating, updating, and deleting them. The application includes features such as user authentication and session management.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## Table of Contents
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Installation
 
-## Learn more
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/[yourusername]/task_manager.git
+   cd task_manager
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+2. **Install dependencies:**
+   Ensure you have Elixir and Phoenix installed, then run:
+   ```sh
+   mix deps.get
+
+3. **Set up the database:**
+  ```sh
+  mix ecto.setup
+
+4. **Start the Phoenix server:**
+  ```sh
+  mix phx.server
+  The server will be available at http://localhost:4000.
