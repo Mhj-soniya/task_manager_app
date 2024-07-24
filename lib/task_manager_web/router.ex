@@ -17,7 +17,8 @@ defmodule TaskManagerWeb.Router do
 
   # Define a pipeline for authenticated requests
   # pipeline :authenticated do
-  #   plug TaskManagerWeb.Plugs.AuthenticateUser
+  #   plug TaskManagerWeb.Auth
+  #   plug TaskManagerWeb.Auth, :authenticate_user
   # end
 
   scope "/", TaskManagerWeb do
@@ -28,6 +29,7 @@ defmodule TaskManagerWeb.Router do
     post "/register", RegistrationController, :create
     get "/login", SessionController, :new
     post "/login", SessionController, :create
+    delete "/logout", SessionController, :delete
 
     get "/todo/new", TodoController, :new
     get "/todos", TodoController, :index
@@ -38,11 +40,16 @@ defmodule TaskManagerWeb.Router do
   end
 
   # Authenticated routes
-  # scope "/", TaskManagerWeb do
+  # scope "/auth", TaskManagerWeb do
   #   pipe_through [:browser, :authenticated]
 
-  #   resources "/todos", TodoController
-  #   # You can also define more routes here if needed
+  #   get "/todo/new", TodoController, :new
+  #   get "/todos", TodoController, :index
+  #   post "/todo", TodoController, :create
+  #   put "/todo/:id/update", TodoController, :update
+  #   delete "/todo/:id", TodoController, :delete
+  # end
+
 
   # end
   # Other scopes may use custom stacks.

@@ -34,4 +34,10 @@ defmodule TaskManagerWeb.SessionController do
     end
   end
 
+  def delete(conn, _params) do
+    conn
+    |> delete_session(:user_id)  # Remove user ID from the session
+    |> put_flash(:info, "You have been logged out.")
+    |> redirect(to: "/login")
+  end
 end

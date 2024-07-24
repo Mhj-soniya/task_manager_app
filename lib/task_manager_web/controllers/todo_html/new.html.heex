@@ -1,4 +1,4 @@
-<div class="container">
+<div>
     <h1>Todos</h1>
     <section class="todo-section">
         <!-- Form for adding new todos -->
@@ -49,5 +49,17 @@
             <.link href={~p"/todos?filter=active"}>Active</.link>
             <.link href={~p"/todos?filter=completed"}>Completed</.link>
         </nav>
+    </section>
+
+    <section>
+        <div>
+            <.link 
+            href={~p"/logout"}
+            method="delete"
+            class="btn"
+            data-confirm="Are you sure you want to log out?"
+            >
+            Log out</.link>
+        </div>
     </section>
 </div>

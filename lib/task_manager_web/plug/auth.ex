@@ -3,6 +3,7 @@ defmodule TaskManagerWeb.Auth do
   Creating Authentication Plug
   Creating a plug to handle user authentication.
   """
+
   import Plug.Conn
 
   alias TaskManager.Repo
@@ -13,10 +14,12 @@ defmodule TaskManagerWeb.Auth do
   def call(conn, _opts) do
     user_id = get_session(conn, :user_id)
     user = if user_id, do: Repo.get(User, user_id)
-    assign(conn, :current_user, user)
+    conn
+    |> assign(:current_user, user)
   end
 
-  # defp authenticate_user(conn, _opts) do
+  # defp authenticate_user(conn) do
+  #   IO.inspect(conn.assigns[:current_user], label: "Current User")
   #   if conn.assigns[:current_user] do
   #     conn
   #   else

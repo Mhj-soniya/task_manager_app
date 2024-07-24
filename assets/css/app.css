@@ -13,16 +13,27 @@ body {
     font-weight: bold;
     font-size: larger;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   h1, h2, h3, h4, h5, h6 {
     color: #343a40;
+  }
+
+  .para{
+    margin-top: 30px;
+    text-align: center;
   }
   
   .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ccc;  /* Box border */
+    padding: 40px 40px;           /* Padding inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 8px;      /* Rounded corners */
+    max-width: 600px;  
   }
   
   .form-group {
@@ -49,9 +60,20 @@ body {
     border-radius: 10px;
     text-decoration: none;
   }
-  
+  .register-btn{
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #DADADA;
+    color: black;
+
+  }
+
   .btn:hover {
     background-color:  #357ABD;
+  }
+
+  .register-btn:hover{
+    background-color: #A5A5A5;
   }
 
   .delete-btn{

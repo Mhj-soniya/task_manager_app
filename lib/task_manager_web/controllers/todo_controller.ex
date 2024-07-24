@@ -6,6 +6,18 @@ defmodule TaskManagerWeb.TodoController do
 
   # Use the Auth plug to ensure the user is authenticated
   plug TaskManagerWeb.Auth when action in [:index, :create, :update, :delete]
+  plug :authenticate_user when action in [:index, :new, :create, :edit, :update, :delete]
+
+  defp authenticate_user(conn, _opts) do
+    if conn.assigns[:current_user] do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You need to log in to access this page")
+      |> redirect(to: "/login")
+      |> halt()
+    end
+  end
 
   def index(conn, %{"filter" => filter}) do
     user_id = conn.assigns[:current_user].id
