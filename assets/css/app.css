@@ -1,0 +1,95 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+/* assets/css/app.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  h1{
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #343a40;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4682B4;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color:  #357ABD;
+  }
+
+  .delete-btn{
+    display: inline-block;
+    padding: 0px 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius:5px;
+    text-decoration: none;
+  }
+  /* assets/css/app.css */
+
+  .todo-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+ 
+
+    /* Style for the section */
+    .todo-section {
+        border: 1px solid #ccc; /* Light grey border */
+        padding: 20px; /* Padding inside the section */
+        border-radius: 8px; /* Optional: rounded corners */
+        background-color: #f9f9f9; /* Light background color */
+        margin-bottom: 20px;
+    }
+
+    .todo-nav a {
+        color: rgb(36, 36, 237);          /* Blue text color */
+        text-decoration: none; /* Underline text */
+    }
+      
+    .todo-nav a:hover {
+        color: darkblue;      /* Darker blue color on hover */
+    }
+      
+
+  
