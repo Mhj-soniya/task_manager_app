@@ -34,21 +34,21 @@ Task Manager is a web application built with the Phoenix framework in Elixir. It
 
 ## Configuration
 
-- ### Environment Variables
+### Environment Variables
 
 - Ensure you configure your environment variables for database connections and other settings in the `config/` directory.
 
 ## Usage
 
-- ### Registration and Login
+### Registration and Login
 
 - Users can register and log in to manage their tasks.
 
-- ### Task Management
+### Task Management
 
 - Users can create, update, and delete tasks.
 
-- ### Session Management
+### Session Management
 
 - The application includes session management to track user logins.
 
